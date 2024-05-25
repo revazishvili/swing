@@ -1,0 +1,349 @@
+import javax.swing.*;
+
+public class NewJFrame extends JFrame {
+    public NewJFrame() {
+        setTitle("ახალი JFrame");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JTextField textField = new JTextField();
+        add(textField);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJFrame frame = new NewJFrame();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+#################################################
+
+
+import javax.swing.*;
+
+public class NewJButton extends JFrame {
+    public NewJButton() {
+        setTitle("JButton დამატება");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JButton button = new JButton("დააკლიკე აქ");
+        add(button);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJButton frame = new NewJButton();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+##################################################################################
+
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class NewJButtonClickListener extends JFrame {
+    public NewJButtonClickListener() {
+        setTitle("JButton დააკლიკების მონიშვნა");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JButton button = new JButton("დააკლიკე აქ");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "გამარჯობა!");
+            }
+        });
+        add(button);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJButtonClickListener frame = new NewJButtonClickListener();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+#################################################################
+
+
+import javax.swing.*;
+
+public class NewJLabel extends JFrame {
+    public NewJLabel() {
+        setTitle("JLabel დამატება");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JLabel label = new JLabel("გამარჯობა!");
+        add(label);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJLabel frame = new NewJLabel();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+
+###################################################
+
+import javax.swing.*;
+
+public class NewJTextField extends JFrame {
+    public NewJTextField() {
+        setTitle("JTextField დამატება");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JTextField textField = new JTextField();
+        add(textField);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJTextField frame = new NewJTextField();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+#######################################################
+
+import javax.swing.*;
+
+public class NewJComboBox extends JFrame {
+    public NewJComboBox() {
+        setTitle("JComboBox დამატება");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        String[] options = {"პირველი", "მეორე", "მესამე"};
+        JComboBox<String> comboBox = new JComboBox<>(options);
+        add(comboBox);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJComboBox frame = new NewJComboBox();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+##########################################################
+
+import javax.swing.*;
+
+public class NewJCheckBox extends JFrame {
+    public NewJCheckBox() {
+        setTitle("JCheckBox დამატება");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JCheckBox checkBox = new JCheckBox("შეამოწმე ეს");
+        add(checkBox);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJCheckBox frame = new NewJCheckBox();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+#################################################################
+
+
+import javax.swing.*;
+
+public class NewJRadioButton extends JFrame {
+    public NewJRadioButton() {
+        setTitle("JRadioButton დამატება");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JRadioButton radioButton1 = new JRadioButton("პირველი");
+        JRadioButton radioButton2 = new JRadioButton("მეორე");
+        ButtonGroup buttonGroup = new ButtonGroup();
+        buttonGroup.add(radioButton1);
+        buttonGroup.add(radioButton2);
+        add(radioButton1);
+        add(radioButton2);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJRadioButton frame = new NewJRadioButton();
+            frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+#####################################################################
+
+
+import javax.swing.*;
+
+public class NewJTextArea extends JFrame {
+    public NewJTextArea() {
+        setTitle("JTextArea დამატება");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        
+        JTextArea textArea = new JTextArea();
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        add(scrollPane);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            NewJTextArea frame = new NewJTextArea();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+##############################################################################
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class AllComponents extends JFrame implements ActionListener {
+    private JTextField textField;
+    private JButton button;
+    private JLabel label;
+    private JComboBox<String> comboBox;
+    private JCheckBox checkBox;
+    private JRadioButton radioButton1;
+    private JRadioButton radioButton2;
+    private ButtonGroup radioButtonGroup;
+    private JTextArea textArea;
+
+    public AllComponents() {
+        setTitle("All Components");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400, 300);
+        setLayout(new BorderLayout());
+        setLocationRelativeTo(null);
+
+        // MenuBar
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+        JMenu editMenu = new JMenu("Edit");
+        menuBar.add(fileMenu);
+        menuBar.add(editMenu);
+        setJMenuBar(menuBar);
+
+        // File Menu Items
+        JMenuItem fileItem1 = new JMenuItem("New");
+        JMenuItem fileItem2 = new JMenuItem("Open");
+        JMenuItem fileItem3 = new JMenuItem("Save");
+        JMenuItem fileItem4 = new JMenuItem("Exit");
+        fileMenu.add(fileItem1);
+        fileMenu.add(fileItem2);
+        fileMenu.add(fileItem3);
+        fileMenu.addSeparator();
+        fileMenu.add(fileItem4);
+
+        // Edit Menu Items
+        JMenuItem editItem1 = new JMenuItem("Cut");
+        JMenuItem editItem2 = new JMenuItem("Copy");
+        JMenuItem editItem3 = new JMenuItem("Paste");
+        editMenu.add(editItem1);
+        editMenu.add(editItem2);
+        editMenu.add(editItem3);
+
+        // Main Panel
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new FlowLayout());
+
+        // JTextField
+        textField = new JTextField(20);
+        mainPanel.add(textField);
+
+        // JButton
+        button = new JButton("დააკლიკე აქ");
+        button.addActionListener(this);
+        mainPanel.add(button);
+
+        // JLabel
+        label = new JLabel("გამარჯობა!");
+        mainPanel.add(label);
+
+        // JComboBox
+        String[] options = {"პირველი", "მეორე", "მესამე"};
+        comboBox = new JComboBox<>(options);
+        mainPanel.add(comboBox);
+
+        // JCheckBox
+        checkBox = new JCheckBox("შეამოწმე ეს");
+        mainPanel.add(checkBox);
+
+        // JRadioButton
+        radioButton1 = new JRadioButton("პირველი");
+        radioButton2 = new JRadioButton("მეორე");
+        radioButtonGroup = new ButtonGroup();
+        radioButtonGroup.add(radioButton1);
+        radioButtonGroup.add(radioButton2);
+        mainPanel.add(radioButton1);
+        mainPanel.add(radioButton2);
+
+        // JTextArea
+        textArea = new JTextArea(5, 20);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        mainPanel.add(scrollPane);
+
+        add(mainPanel, BorderLayout.CENTER);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            AllComponents frame = new AllComponents();
+            frame.setVisible(true);
+        });
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button) {
+            String text = textField.getText();
+            JOptionPane.showMessageDialog(this, "შეტყობინება: " + text);
+        }
+    }
+}
+
+
